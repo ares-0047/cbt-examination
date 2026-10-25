@@ -15,6 +15,13 @@
 }
 
 .exam-info, .student-info { display: flex; flex-direction: column; }
+.exam-info .brand {
+    font-size: 1rem;
+}
+.exam-info .brand-logo {
+    width: 38px;
+    height: 38px;
+}
 .exam-name, .q-id { font-size: 0.8rem; color: var(--text-secondary); }
 
 .timer-box {
