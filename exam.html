@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Interface - Quantum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body class="exam-body">
+    <header class="exam-header">
+        <div class="exam-info">
+            <h1 class="logo">QUANTUM</h1>
+            <span id="headerExamName" class="exam-name">Exam Name</span>
+        </div>
+        <div class="student-info">
+            <span id="headerStudentName">Student Name</span>
+            <span id="headerQId" class="q-id">Q-ID</span>
+        </div>
+        <div class="timer-box">
+            Time Left: <span id="timeLeft">00:00:00</span>
+        </div>
+    </header>
+
+    <div class="exam-layout">
+        <!-- Main Area: Split between Passage and Question -->
+        <main class="main-split-area">
+            <!-- Reading Passage Area (Hidden by default) -->
+            <div id="passageArea" class="passage-area" style="display: none;">
+                <div class="passage-header">Reading Passage</div>
+                <div class="passage-content" id="passageText">Loading passage...</div>
+            </div>
+
+            <!-- Question Area -->
+            <div class="question-area">
+                <div class="question-header">
+                    <h3 id="questionNumberDisplay">Question No. 1</h3>
+                    <div class="question-marks">
+                        <span id="marksPositive">+1.0</span> | <span id="marksNegative">-0.33</span>
+                    </div>
+                </div>
+                
+                <div class="question-content">
+                    <p id="questionText">Loading question...</p>
+                    <div class="options-container" id="optionsContainer">
+                        <!-- Options injected via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <div class="left-actions">
+                        <button class="btn" id="markReviewBtn">Mark for Review</button>
+                        <button class="btn" id="clearBtn">Clear Response</button>
+                    </div>
+                    <div class="right-actions">
+                        <button class="btn" id="prevBtn">Previous</button>
+                        <button class="btn btn-primary" id="saveNextBtn">Save & Next</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Side Panel -->
+        <aside class="side-panel">
+            <div class="panel-header">Question Palette</div>
+            
+            <div class="palette-stats">
+                <div class="stat"><span class="legend-box answered"></span> <span id="countAnswered">0</span> Answered</div>
+                <div class="stat"><span class="legend-box not-answered"></span> <span id="countNotAnswered">0</span> Not Answered</div>
+                <div class="stat"><span class="legend-box not-visited"></span> <span id="countNotVisited">0</span> Not Visited</div>
+                <div class="stat"><span class="legend-box marked"></span> <span id="countMarked">0</span> Marked</div>
+            </div>
+
+            <div class="question-grid" id="questionGrid">
+                <!-- Numbers injected via JavaScript -->
+            </div>
+
+            <div class="submit-section">
+                <button class="btn btn-primary submit-exam-btn" id="submitExamBtn">Submit Examination</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Submission Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Submission</h2>
+            <p>Are you sure you want to submit? You cannot change your answers after submission.</p>
+            <div class="modal-actions">
+                <button class="btn" id="cancelSubmitBtn">Cancel</button>
+                <button class="btn btn-primary" id="confirmSubmitBtn">Yes, Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="exam.js"></script>
+</body>
+</html>

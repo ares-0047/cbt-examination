@@ -1,0 +1,119 @@
+.result-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.result-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.result-header h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.student-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: var(--bg-main);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.detail-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-group .label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.detail-group .value {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    border-radius: 4px;
+}
+
+.stat-box h4 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.stat-num {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.score-section {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.score-row:last-child {
+    border-bottom: none;
+}
+
+.score-row.highlight {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Print Styles */
+@media print {
+    body { background-color: white; color: black; }
+    .no-print { display: none !important; }
+    .result-card, .student-details, .stat-box, .score-section {
+        background-color: white;
+        border-color: black;
+        color: black;
+    }
+    .stat-box h4, .detail-group .label { color: #333; }
+    .container { margin: 0; padding: 0; width: 100%; max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+}

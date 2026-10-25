@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Result - Quantum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <nav class="no-print">
+        <div class="logo">QUANTUM</div>
+    </nav>
+
+    <main class="container">
+        <div class="result-card" id="resultCard" style="display: none;">
+            <div class="result-header">
+                <h2>Score Card</h2>
+                <p id="resExamName">Examination Name</p>
+            </div>
+
+            <div class="student-details">
+                <div class="detail-group">
+                    <span class="label">Candidate Name:</span>
+                    <span class="value" id="resStudentName">-</span>
+                </div>
+                <div class="detail-group">
+                    <span class="label">Q-ID:</span>
+                    <span class="value" id="resQId">-</span>
+                </div>
+                <div class="detail-group">
+                    <span class="label">Submission Date:</span>
+                    <span class="value" id="resDate">-</span>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h4>Total Questions</h4>
+                    <span id="resTotalQuestions" class="stat-num">-</span>
+                </div>
+                <div class="stat-box">
+                    <h4>Attempted</h4>
+                    <span id="resAttempted" class="stat-num">-</span>
+                </div>
+                <div class="stat-box">
+                    <h4>Correct</h4>
+                    <span id="resCorrect" class="stat-num">-</span>
+                </div>
+                <div class="stat-box">
+                    <h4>Incorrect</h4>
+                    <span id="resIncorrect" class="stat-num">-</span>
+                </div>
+            </div>
+
+            <div class="score-section">
+                <div class="score-row">
+                    <span>Marks Obtained:</span>
+                    <strong id="resFinalScore">-</strong>
+                </div>
+                <div class="score-row">
+                    <span>Maximum Marks:</span>
+                    <strong id="resMaxMarks">-</strong>
+                </div>
+                <div class="score-row highlight">
+                    <span>Percentage:</span>
+                    <strong id="resPercentage">- %</strong>
+                </div>
+            </div>
+
+            <div class="action-buttons no-print">
+                <button class="btn" onclick="window.print()">Print Result</button>
+                <button class="btn btn-primary" onclick="window.location.href='index.html'">Back to Home</button>
+            </div>
+        </div>
+
+        <div id="loadingMsg" class="text-center">Loading result...</div>
+    </main>
+    
+    <script src="result.js"></script>
+</body>
+</html>

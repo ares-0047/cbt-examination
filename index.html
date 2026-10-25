@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Mock Test Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">QUANTUM</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#exams">Examinations</a>
+            <a href="admin.html">Admin Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Prepare. Practise. Perform.</h1>
+        <p>A professional, distraction-free computer-based testing environment designed for serious candidates.</p>
+        <a href="#exams" class="btn btn-primary">Explore Examinations</a>
+    </header>
+
+    <main class="container" id="exams">
+        <h2 class="text-center mb-4">Available Mock Tests</h2>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>GATE</h3>
+                <p>Graduate Aptitude Test in Engineering. Evaluate your comprehensive understanding of various undergraduate subjects.</p>
+                <button class="btn" onclick="registerForExam('GATE')">Register for GATE</button>
+            </div>
+            
+            <div class="card">
+                <h3>CAT</h3>
+                <p>Common Admission Test. Practise quantitative, verbal, and logical reasoning under timed conditions.</p>
+                <button class="btn" onclick="registerForExam('CAT')">Register for CAT</button>
+            </div>
+            
+            <div class="card">
+                <h3>IELTS</h3>
+                <p>International English Language Testing System. Experience standard reading and writing CBT formats.</p>
+                <button class="btn" onclick="registerForExam('IELTS')">Register for IELTS</button>
+            </div>
+            
+            <div class="card">
+                <h3>Other Exams</h3>
+                <p>General mock tests assessing aptitude, technical skills, and reasoning for various competitive examinations.</p>
+                <button class="btn" onclick="registerForExam('Other')">Register for Other</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Quantum Mock Test Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.admin-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    max-width: 400px;
+    margin: 60px auto;
+    border-radius: 8px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.admin-table th, 
+.admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+}
+
+.admin-table tr:hover {
+    background-color: var(--hover-color);
+}

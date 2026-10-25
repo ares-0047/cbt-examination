@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Instructions - Quantum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="instructions.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">QUANTUM</div>
+        <div class="nav-links">
+            <span id="navStudentName">Student</span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="instructions-card">
+            <h2>General Instructions</h2>
+            
+            <div class="exam-summary">
+                <div class="summary-item">
+                    <strong>Examination:</strong> <span id="examName">Loading...</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Total Questions:</strong> <span id="totalQuestions">-</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Duration:</strong> <span id="duration">-</span> Minutes
+                </div>
+                <div class="summary-item">
+                    <strong>Maximum Marks:</strong> <span id="maxMarks">-</span>
+                </div>
+            </div>
+
+            <div class="rules-section">
+                <h3>Please read the following rules carefully:</h3>
+                <ol>
+                    <li>The clock will be set at the server. The countdown timer at the top right of screen will display the remaining time available for you to complete the examination.</li>
+                    <li>When the timer reaches zero, the examination will end by default. You will not be required to end or submit your examination.</li>
+                    <li>The Question Palette displayed on the right side of screen will show the status of each question using the following visual indicators:
+                        <ul class="palette-legend">
+                            <li><span class="legend-box not-visited"></span> Not Visited</li>
+                            <li><span class="legend-box not-answered"></span> Not Answered</li>
+                            <li><span class="legend-box answered"></span> Answered</li>
+                            <li><span class="legend-box marked"></span> Marked for Review</li>
+                        </ul>
+                    </li>
+                    <li>You can click on the ">" button to collapse the question palette and maximize the question window.</li>
+                    <li>To save your answer, you MUST click on the <strong>Save & Next</strong> button.</li>
+                </ol>
+            </div>
+
+            <div class="declaration">
+                <label>
+                    <input type="checkbox" id="agreeCheckbox">
+                    I have read and understood the instructions. I agree that in case of not adhering to the instructions, I will be disqualified.
+                </label>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" id="startExamBtn" disabled>Start Examination</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Quantum Mock Test Portal.</p>
+    </footer>
+
+    <script src="instructions.js"></script>
+</body>
+</html>
