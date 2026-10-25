@@ -1,5 +1,5 @@
 {
-  "name": "quantum-mock-test-portal",
+  "name": "velocity-mock-test-portal",
   "version": "1.0.0",
   "description": "Beginner-friendly CBT Examination Website",
   "main": "server.js",
